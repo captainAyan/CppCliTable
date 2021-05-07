@@ -61,7 +61,7 @@ class Table {
 
   void addRow(std::string t[]) {
     std::vector<std::string> _t;
-    for(int i = 0; i < _columns.size(); i++) {
+    for(size_t i = 0; i < _columns.size(); i++) {
       _t.push_back(t[i]);
 
       if((_columns.at(i).getSize() < t[i].length()) && (_columns.at(i).isResizable())) {
@@ -74,14 +74,14 @@ class Table {
   void draw() {
     // just making a list (string list) of headers
     std::vector<std::string> headers;
-    for (int i = 0; i < _columns.size(); i++) 
+    for (size_t i = 0; i < _columns.size(); i++) 
       headers.push_back(_columns.at(i).getHeading());
 
     printSeparator('=', _columns);
     printRow(headers, _columns, true);
     printSeparator('=', _columns);
 
-    for (int i=0; i<_rows.size(); i++) {
+    for (size_t i=0; i<_rows.size(); i++) {
       printRow(_rows.at(i), _columns, false);
       printSeparator('-', _columns);
     }
@@ -91,9 +91,9 @@ class Table {
   private: 
   void printSeparator(char dash, std::vector<Column> columns) {
     std::cout << '+';
-    for (int i=0; i<columns.size(); i++) {
+    for (size_t i=0; i<columns.size(); i++) {
       int k = columns.at(i).getSize();
-      for(int j = 0; j<(k + columns.at(i).getPadding()*2); j++) std::cout << dash;
+      for(size_t j = 0; j<(k + columns.at(i).getPadding()*2); j++) std::cout << dash;
       std::cout << '+';
     }
     std::cout << std::endl;
@@ -105,7 +105,7 @@ class Table {
 
     std::vector<std::string> buffer;
 
-    for (int i = 0; i < c.size(); i++) {
+    for (size_t i = 0; i < c.size(); i++) {
 
       /* the value of this variable 'value' will be updated 
       (don't use it for reference to the original value) */
@@ -121,7 +121,8 @@ class Table {
         value = value.substr(0, c.at(i).getSize());
       }
 
-      for (int j = 0; j < diff; j++) {
+      // adding space for alignment
+      for (size_t j = 0; j < diff; j++) {
         switch((isHeader ? c.at(i).getHeadingAlignment() : c.at(i).getColumnAlignment())) {
           case Column::RIGHT_ALIGN: {
             value.insert(0, " ");
@@ -136,7 +137,8 @@ class Table {
         }
       }
 
-      for (int j = 0; j < c.at(i).getPadding(); j++) {
+      // adding space as padding
+      for (size_t j = 0; j < c.at(i).getPadding(); j++) {
         value.append(" ");
         value.insert(0, " ");
       }
@@ -159,7 +161,7 @@ class Table {
     std::cout << std::endl;
 
     // checking if buffer is empty or not
-    for (int i = 0; i < buffer.size(); i++) {
+    for (size_t i = 0; i < buffer.size(); i++) {
       if (buffer.at(i) != "") {
         printRow(buffer, c, isHeader);
         break;
