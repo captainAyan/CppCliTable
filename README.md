@@ -30,7 +30,7 @@ _Coming Soon_ 😁
 ```
 
 ### Instantiate a Table
-```cpp
+```c++
 Table table;
 ```
 
@@ -57,7 +57,7 @@ Arg No. | Description
 
 1 *'Column size' means the same as mentioned in **Description of Column constructor** Arg No. 4*
 
-```cpp
+```c++
 Column c[3] = {
   Column("Name", Column::CENTER_ALIGN, Column::LEFT_ALIGN, 1,7, Column::NON_RESIZABLE),
   Column("Topic", Column::CENTER_ALIGN, Column::RIGHT_ALIGN, 1,2, Column::RESIZABLE),
@@ -66,7 +66,7 @@ Column c[3] = {
 ```
 
 ### Assigning Columns to the Table
-```cpp
+```c++
 for (int i = 0; i < 3; i++) {
   table.addColumn(c[i]);
 }
@@ -102,6 +102,32 @@ table.draw();
 |         |                 | ny    |
 +---------+-----------------+-------+
 | Mykull  |      Crack Head | U.S.A |
++---------+-----------------+-------+
+```
+
+### Line Breaking
+For **breaking line** use `\n` character.
+```c++
+std::string r[3][3] = {
+  {"Samuel Miller", "Coding Memes", "Venezuela"},
+  {"DevEd", "Web Development", "Germany"},
+  {"Mykull", "Crack\n Head", "U.S.A"}
+};
+```
+#### Result:
+```bash
++=========+=================+=======+
+|  Name   |      Topic      | Natio |
+|         |                 |   n   |
++=========+=================+=======+
+| Samuel  |    Coding Memes | Venez |
+| Miller  |                 | uela  |
++---------+-----------------+-------+
+| DevEd   | Web Development | Germa |
+|         |                 | ny    |
++---------+-----------------+-------+
+| Mykull  |           Crack | U.S.A |
+|         |            Head |       |
 +---------+-----------------+-------+
 ```
 
