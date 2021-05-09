@@ -31,7 +31,7 @@ _Coming Soon_ 😁
 
 ### Instantiate a Table
 ```c++
-Table table;
+clitable::Table table;
 ```
 
 ### Instantiate Columns
@@ -47,21 +47,21 @@ Arg No. | Description
 5|Column resizability|
 
 #### Alignment Parameters
-1. **Column::CENTER_ALIGN**: For aligning value or header to the *center*.
-2. **Column::RIGHT_ALIGN**: For aligning value or header to the *right*.
-3. **Column::LEFT_ALIGN**: For aligning value or header to the *left*.
+1. **clitable::Column::CENTER_ALIGN**: For aligning value or header to the *center*.
+2. **clitable::Column::RIGHT_ALIGN**: For aligning value or header to the *right*.
+3. **clitable::Column::LEFT_ALIGN**: For aligning value or header to the *left*.
 
 #### Resizability Parameters
-1. **Column::RESIZABLE**: The 'column size'<sup>1</sup> will increase automatically if the values don't fit. 
-2. **Column::NON_RESIZABLE**: The 'column size'<sup>1</sup> will not change even if the values don't fit.
+1. **clitable::Column::RESIZABLE**: The 'column size'<sup>1</sup> will increase automatically if the values don't fit. 
+2. **clitable::Column::NON_RESIZABLE**: The 'column size'<sup>1</sup> will not change even if the values don't fit.
 
 1 *'Column size' means the same as mentioned in **Description of Column constructor** Arg No. 4*
 
 ```c++
-Column c[3] = {
-  Column("Name", Column::CENTER_ALIGN, Column::LEFT_ALIGN, 1,7, Column::NON_RESIZABLE),
-  Column("Topic", Column::CENTER_ALIGN, Column::RIGHT_ALIGN, 1,2, Column::RESIZABLE),
-  Column("Nation", Column::CENTER_ALIGN, Column::LEFT_ALIGN, 1,5, Column::NON_RESIZABLE)
+clitable::Column c[3] = {
+  clitable::Column("Name", clitable::Column::CENTER_ALIGN, clitable::Column::LEFT_ALIGN, 1,7,  clitable::Column::NON_RESIZABLE),
+  clitable::Column("Topic", clitable::Column::CENTER_ALIGN, clitable::Column::RIGHT_ALIGN, 1,2, clitable::Column::RESIZABLE),
+  clitable::Column("Nation", clitable::Column::CENTER_ALIGN, clitable::Column::LEFT_ALIGN, 1,5, clitable::Column::NON_RESIZABLE)
 };
 ```
 

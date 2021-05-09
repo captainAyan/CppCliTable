@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 
+namespace clitable {
+
 class Column {
 
   private:
@@ -200,3 +202,4 @@ class Table {
   }
 
 };
+}

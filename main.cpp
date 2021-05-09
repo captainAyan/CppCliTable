@@ -11,11 +11,11 @@ int main() {
     {"Mykull", "Crack Head", "U.S.A"}
   };
 
-  Table table;
-  Column c[3] = {
-    Column("Name", Column::CENTER_ALIGN, Column::LEFT_ALIGN, 1,7, Column::NON_RESIZABLE),
-    Column("Topic", Column::CENTER_ALIGN, Column::RIGHT_ALIGN, 1,2, Column::RESIZABLE),
-    Column("Nation", Column::CENTER_ALIGN, Column::LEFT_ALIGN, 1,5, Column::NON_RESIZABLE)};
+  clitable::Table table;
+  clitable::Column c[3] = {
+    clitable::Column("Name", clitable::Column::CENTER_ALIGN, clitable::Column::LEFT_ALIGN, 1,7, clitable::Column::NON_RESIZABLE),
+    clitable::Column("Topic", clitable::Column::CENTER_ALIGN, clitable::Column::RIGHT_ALIGN, 1,2, clitable::Column::RESIZABLE),
+    clitable::Column("Nation", clitable::Column::CENTER_ALIGN, clitable::Column::LEFT_ALIGN, 1,5, clitable::Column::NON_RESIZABLE)};
 
   for (int i = 0; i < 3; i++) {
     table.addColumn(c[i]);
