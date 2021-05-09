@@ -7,6 +7,8 @@
   </p>
 </p>
 
+[![Screenshot](https://raw.githubusercontent.com/captainAyan/cppclitable/main/screenshot/screenshot1.png)]()
+
 ## About
 
 A C++ "single header file" library for drawing tables in the console.
