@@ -87,12 +87,18 @@ for (int i = 0; i < 3; i++) {
 }
 ```
 
+### Adding Title
+```c++
+table.addTitle("These Are YOUTUBERS");
+```
+
 ### Printing the Table
 ```c++
 table.draw();
 ```
 #### Result:
 ```bash
+         These Are YOUTUBERS
 +=========+=================+=======+
 |  Name   |      Topic      | Natio |
 |         |                 |   n   |
@@ -118,6 +124,7 @@ std::string r[3][3] = {
 ```
 #### Result:
 ```bash
+         These Are YOUTUBERS
 +=========+=================+=======+
 |  Name   |      Topic      | Natio |
 |         |                 |   n   |

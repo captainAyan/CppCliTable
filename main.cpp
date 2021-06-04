@@ -17,6 +17,8 @@ int main() {
     clitable::Column("Topic", clitable::Column::CENTER_ALIGN, clitable::Column::RIGHT_ALIGN, 1,2, clitable::Column::RESIZABLE),
     clitable::Column("Nation", clitable::Column::CENTER_ALIGN, clitable::Column::LEFT_ALIGN, 1,5, clitable::Column::NON_RESIZABLE)};
 
+  table.addTitle("These Are YOUTUBERS");
+
   for (int i = 0; i < 3; i++) {
     table.addColumn(c[i]);
   }
