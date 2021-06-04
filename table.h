@@ -102,7 +102,7 @@ class Table {
 
     for (size_t i=0; i<_rows.size(); i++) {
       printRow(_rows.at(i), _columns, false);
-      // printSeparator('-', _columns);
+      printSeparator('-', _columns);
     }
   }
 
