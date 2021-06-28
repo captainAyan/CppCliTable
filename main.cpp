@@ -19,14 +19,11 @@ int main() {
 
   table.addTitle("These Are YOUTUBERS");
 
-  for (int i = 0; i < 3; i++) {
-    table.addColumn(c[i]);
-  }
+  for (int i = 0; i < 3; i++) table.addColumn(c[i]);
 
-  for (int i = 0; i < 3; i++) {
-    table.addRow(r[i]);
-  }
-  table.draw();
+  for (int i = 0; i < 3; i++) table.addRow(r[i]);
+
+  std::cout << table.draw();
 
   return EXIT_SUCCESS;
 }
